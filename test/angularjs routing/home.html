@@ -1,0 +1,32 @@
+<div ng-controller="AppCtrl" class="tbl">
+    <div class="headPage">
+        <a href="#/!">
+            <h1>BOOK MANAGER</h1>
+        </a>
+    </div>
+    <div class="ng-scope layout-padding">
+        <div class="ng-scope layout-row tableborder" style="font-weight: bold">
+            <div class="flex">Index</div>
+            <div class="flex">Book</div>
+            <div class="flex">Authors</div>
+            <div class="flex">Option</div>
+        </div>
+        <div ng-repeat="x in info" class="ng-scope layout-row tableborder" layout-align: "center center">
+            <div class="flex float-font">{{$index + 1}}</div>
+            <div class="flex">
+                <div class="float-font">{{x.book}}</div>
+            </div>
+            <div class="flex">
+                <div class="float-font">{{x.author}}</div>
+            </div>
+            <div class="flex">
+                <md-button href="#!edit/{{$index}}" class="btn"><strong>Edit</strong></md-button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="layout-padding ng-scope">
+            <md-button class="btn" href="#!add"><strong>Add</strong></md-button>
+        </div>
+    </div>
+</div>

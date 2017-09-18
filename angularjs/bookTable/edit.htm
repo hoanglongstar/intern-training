@@ -1,0 +1,22 @@
+
+<h1>Edit your book's information</h1>
+<div>
+    <md-content class="md-no-momentum">
+        <md-input-container class="md-icon-float md-block">
+            <label>Book's Name</label>
+            <md-icon md-svg-src="img/icons/ic_school_24px.svg"></md-icon>
+            <input type="text" ng-model="info.book">
+        </md-input-container>
+    </md-content>
+    <md-content class="md-no-momentum">
+        <md-input-container class="md-icon-float md-block">
+            <label>Author</label>
+            <md-icon md-svg-src="img/icons/ic_person_24px.svg"></md-icon>
+            <input type="text" ng-model="info.author">
+        </md-input-container>
+    </md-content>
+    <div>
+        <md-button class="btn" ng-show="modifyItem[info.id]" ng-click="updateItem(info)"><strong>Update</strong></md-button>
+        <md-button class="btn" ng-click="removeAlert($index,$event)"><strong>Delete</strong></md-button>    
+    </div>
+</div>

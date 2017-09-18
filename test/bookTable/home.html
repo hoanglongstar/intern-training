@@ -1,0 +1,76 @@
+<div >
+    
+    
+            <div class="ng-scope layout-padding">
+                <div class="ng-scope layout-row tableborder" style="font-weight: bold">
+                    <div class="flex">Index</div>
+                    <div class="flex">Book</div>
+                    <div class="flex">Authors</div>
+                    <div class="flex">Option</div>
+                </div>
+                <div ng-repeat="x in info" class="ng-scope layout-row tableborder" layout-align: "center center">
+                    <div class="flex float-font">{{$index + 1}}</div>
+                    <div class="flex">
+                        <div ng-hide="modifyItem[x.id]" class="float-font">{{x.book}}</div>
+                        <div ng-show="modifyItem[x.id]">
+                            <md-content class="md-no-momentum">
+                                <md-input-container class="md-icon-float md-block">
+                                    <input type="text" ng-model="x.book" />
+                                </md-input-container>
+                            </md-content>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div ng-hide="modifyItem[x.id]" class="float-font">{{x.author}}</div>
+                        <div ng-show="modifyItem[x.id]">
+                            <md-content class="md-no-momentum">
+                                <md-input-container class="md-icon-float md-block">
+                                    <input type="text" ng-model="x.author" />
+                                </md-input-container>
+                            </md-content>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <md-button  href="#!edit" class="btn" ng-hide="modifyItem[x.id]" ng-click="changeItem(x)"><strong>Edit</strong></md-button>
+                        <md-button class="btn" ng-show="modifyItem[x.id]" ng-click="updateItem(x)"><strong>Update</strong></md-button>
+                        <md-button class="btn" ng-click="removeAlert($index,$event)"><strong>Delete</strong></md-button>
+                    </div>
+                </div>
+    
+    
+            </div>
+            <div>
+                <!--<div class="layout-row ng-scope">
+                    <span class="flex-10">Book:</span>
+                    <input ng-model="addBook" class="flex-100" />
+                </div><br>
+                <div class="layout-row ng-scope">
+                    <span class="flex-10">Author:</span>
+                    <input ng-model="addAuthor" class="flex-100"/>
+                </div><br>-->
+                <md-content class="md-no-momentum">
+                    <md-input-container class="md-icon-float md-block">
+                        <label>Book</label>
+                        <md-icon md-svg-src="img/icons/ic_school_24px.svg"></md-icon>
+                        <!--<i class="material-icons">&#xE0E0;</i>-->
+                        <input type="text" ng-model="addBook">
+                    </md-input-container>
+                </md-content>
+                <md-content class="md-no-momentum">
+                    <md-input-container class="md-icon-float md-block">
+                        <label>Author</label>
+                        <md-icon md-svg-src="img/icons/ic_person_24px.svg"></md-icon>
+                        <input type="text" ng-model="addAuthor">
+                    </md-input-container>
+                </md-content>
+                <div class="layout-padding ng-scope">
+                    <md-button class="btn" ng-click="addItem()"><strong>Add</strong></md-button>
+                </div>
+            </div>
+    
+            <!-- <md-button href="#!edit">click</md-button> -->
+           
+            <a>next</a>
+    
+    
+        </div>

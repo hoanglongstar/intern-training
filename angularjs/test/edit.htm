@@ -1,0 +1,34 @@
+<h1 class="headPage">Edit your book's information</h1>
+
+<div ng-repeat="x in info" class="layout-row tableborder">
+
+    <div ng-show="modifyItem[x.id]" class="flex">
+        <md-content class="md-no-momentum">
+            <md-input-container class="md-icon-float md-block">
+                <label>Book's Name</label>
+                <md-icon md-svg-src="img/icons/ic_school_24px.svg"></md-icon>
+                <input type="text" ng-model="x.book">
+            </md-input-container>
+        </md-content>
+    </div>
+
+
+    <div ng-show="modifyItem[x.id]" class="flex">
+        <md-content class="md-no-momentum">
+            <md-input-container class="md-icon-float md-block">
+                <label>Author</label>
+                <md-icon md-svg-src="img/icons/ic_person_24px.svg"></md-icon>
+                <input type="text" ng-model="x.author">
+            </md-input-container>
+        </md-content>
+    </div>
+
+
+
+
+    <div class="flex">
+        <md-button class="btn" ng-click="removeAlert($index,$event)"><strong>Delete</strong></md-button>
+    </div>
+</div>
+<md-button class="btn" ng-hide="modifyItem[x.id]" href="#/!" ng-click="updateItem(x)"><strong>Update</strong></md-button>
+</div>

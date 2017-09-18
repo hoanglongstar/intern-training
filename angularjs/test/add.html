@@ -1,0 +1,22 @@
+
+<h1 class="headPage">Add your new book</h1>
+<div>
+    <md-content class="md-no-momentum">
+        <md-input-container class="md-icon-float md-block">
+            <label>Book's Name</label>
+            <md-icon md-svg-src="img/icons/ic_school_24px.svg"></md-icon>
+            <input type="text" ng-model="Name">
+        </md-input-container>
+    </md-content>
+    <md-content class="md-no-momentum">
+        <md-input-container class="md-icon-float md-block">
+            <label>Author</label>
+            <md-icon md-svg-src="img/icons/ic_person_24px.svg"></md-icon>
+            <input type="text" ng-model="Author">
+        </md-input-container>
+    </md-content>
+    <div class="layout-padding">
+        <md-button href="#!/"  class="btn" ng-click="addItem()"><strong>Add</strong></md-button>
+        <md-button href="#!/" class="btn">Cancel</md-button>
+    </div>
+</div>

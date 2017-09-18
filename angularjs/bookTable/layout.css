@@ -1,0 +1,6 @@
+body{text-align: center;}
+.tablecontent{margin: 0;padding: 0;}
+.tableborder{border-bottom:2px solid lightskyblue;border-radius: 5px;}
+.btn{color: white;background-color: skyblue;border-radius: 3px;font-size: 16px;}
+.btn:not([disable]):hover{background-color: lightblue;color: white;}
+.float-font{text-align:center center !important;margin:15px!important;}
